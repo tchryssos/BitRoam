@@ -12,8 +12,36 @@ $(document).ready(()=>{
 
   let currentFrame=$("#boy-walking").children()
 
-  let background1Position=0
-  let background2Position=0
+  let background1Position=Math.random()
+  let background2Position=Math.random()
+  let cloudsPosition=Math.random()
+
+  function clouds1Move(){
+    setInterval(()=>{
+      cloudsPosition=cloudsPosition+1
+      $("#clouds-1-div").css('background-position-x', cloudsPosition)
+    }, 200)
+  }
+
+  clouds1Move()
+
+  function clouds2Move(){
+    setInterval(()=>{
+      cloudsPosition=cloudsPosition+1
+      $("#clouds-2-div").css('background-position-x', cloudsPosition)
+    }, 250)
+  }
+
+  clouds2Move()
+
+  // function clouds3Move(){
+  //   setInterval(()=>{
+  //     cloudsPosition=cloudsPosition+1
+  //     $("#clouds-3-div").css('background-position-x', cloudsPosition)
+  //   }, 100)
+  // }
+  //
+  // clouds3Move()
 
 
   function hills1Right(){
