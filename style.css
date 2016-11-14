@@ -78,14 +78,15 @@ body, html {
   z-index: 75;
 }
 
-/*#clouds-3-div {
+#audio-icon-div {
+  z-index:110;
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 20px;
   right: 0;
   bottom: 0;
-  background-image: url("./art/clouds 3.png");
-  background-size: 100% 100%;
-  height: 100%;
-  z-index: 75;
-}*/
+}
+
+#audio-icon {
+  height: 50px;
+  opacity: 0.5;
+}

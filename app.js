@@ -12,9 +12,11 @@ $(document).ready(()=>{
 
   let currentFrame=$("#boy-walking").children()
 
-  let background1Position=Math.random()
-  let background2Position=Math.random()
-  let cloudsPosition=Math.random()
+  let songPaused=false
+
+  let background1Position=0
+  let background2Position=0
+  let cloudsPosition=0
 
   function clouds1Move(){
     setInterval(()=>{
@@ -34,14 +36,6 @@ $(document).ready(()=>{
 
   clouds2Move()
 
-  // function clouds3Move(){
-  //   setInterval(()=>{
-  //     cloudsPosition=cloudsPosition+1
-  //     $("#clouds-3-div").css('background-position-x', cloudsPosition)
-  //   }, 100)
-  // }
-  //
-  // clouds3Move()
 
 
   function hills1Right(){
@@ -120,6 +114,21 @@ $(document).ready(()=>{
       clearInterval(keyPressed)
       keyPressed=null
       $("#boy-walking").append(lookLeft)
+    }
+  })
+
+  $('#audio-icon-div').click(()=>{
+    if (songPaused===false){
+        $('#song-player')[0].pause()
+        $('#audio-icon-div').empty()
+        $('#audio-icon-div').append("<img id='audio-icon' src='./art/no audio.png'/>")
+        $('#song-player')[0].currentTime=0
+        songPaused=true
+    } else {
+      $('#song-player')[0].play()
+      $('#audio-icon-div').empty()
+      $('#audio-icon-div').append("<img id='audio-icon' src='./art/audio.png'/>")
+      songPaused=false
     }
   })
 
