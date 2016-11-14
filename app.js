@@ -10,12 +10,16 @@ $(document).ready(()=>{
 
   let keyPressed=null
 
+  let currentFrame=$("#boy-walking").children()
+
+
   $("#boy-walking").append(lookRight)
 
   $('body').keydown((e)=>{
-    $("#boy-walking").empty()
+
+    // $("#boy-walking").empty()
     if(e.which===39){
-      $("#boy-walking").append(lookRight)
+      // $("#boy-walking").append(lookRight)
       if (keyPressed) return
       keyPressed=setInterval(()=>{
         if ($("#boy-walking").children()[0].id==="look-right"){
@@ -28,7 +32,7 @@ $(document).ready(()=>{
       }, 250)
 
     } else if(e.which===37){
-      $("#boy-walking").append(lookLeft)
+      // $("#boy-walking").append(lookLeft)
       if (keyPressed) return
       keyPressed=setInterval(()=>{
       if ($("#boy-walking").children()[0].id==="look-left"){
