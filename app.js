@@ -47,13 +47,14 @@ $(document).ready(()=>{
   })
 
   $('body').keyup((e)=>{
-    $("#boy-walking").empty()
     if(e.which===39){
+      $("#boy-walking").empty()
       clearInterval(keyPressed)
       keyPressed=null
       $("#boy-walking").append(lookRight)
 
     } else if (e.which===37){
+      $("#boy-walking").empty()
       clearInterval(keyPressed)
       keyPressed=null
       $("#boy-walking").append(lookLeft)
