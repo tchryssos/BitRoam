@@ -12,6 +12,33 @@ $(document).ready(()=>{
 
   let currentFrame=$("#boy-walking").children()
 
+  let background1Position=0
+  let background2Position=0
+
+
+  function hills1Right(){
+    background1Position=background1Position-10;
+
+    $("#hills-1-div").css('background-position-x', background1Position)
+  }
+
+  function hills1Left(){
+    background1Position=background1Position+10;
+
+    $("#hills-1-div").css('background-position-x', background1Position)
+  }
+
+  function hills2Left(){
+    background2Position=background2Position+4
+
+    $("#hills-2-div").css('background-position-x', background2Position)
+  }
+
+  function hills2Right(){
+    background2Position=background2Position-4
+
+    $("#hills-2-div").css('background-position-x', background2Position)
+  }
 
   $("#boy-walking").append(lookRight)
 
@@ -19,8 +46,12 @@ $(document).ready(()=>{
 
     // $("#boy-walking").empty()
     if(e.which===39){
-      // $("#boy-walking").append(lookRight)
+
+      hills1Right()
+      hills2Right()
+
       if (keyPressed) return
+
       keyPressed=setInterval(()=>{
         if ($("#boy-walking").children()[0].id==="look-right"){
           $("#boy-walking").empty()
@@ -32,7 +63,10 @@ $(document).ready(()=>{
       }, 250)
 
     } else if(e.which===37){
-      // $("#boy-walking").append(lookLeft)
+
+      hills1Left()
+      hills2Left()
+
       if (keyPressed) return
       keyPressed=setInterval(()=>{
       if ($("#boy-walking").children()[0].id==="look-left"){

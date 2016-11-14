@@ -1,4 +1,42 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+#animation {
+  height: 100%;
+  width: 100%;
+}
+
 #boy-walking img {
-  height: 200px;
+  height: 30%;
   position: absolute;
+  bottom: -15px;;
+  z-index: 100;
+}
+
+#hills-1-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./art/hills 1 large.png");
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+  height: 100%;
+  z-index: 90;
+}
+
+#hills-2-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./art/hills 2 large.png");
+  background-repeat: repeat-x;
+  background-size: 100% 100%;
+  height: 100%;
+  z-index: 80;
 }
