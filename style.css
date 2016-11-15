@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+
 body, html {
   min-height: 100%;
   min-width: 100%;
@@ -91,4 +94,30 @@ body, html {
 #audio-icon {
   height: 50px;
   opacity: 0.5;
+}
+
+#inst-container {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+}
+
+#moving-instructions-div{
+  z-index:120;
+  position: relative;
+  left: -50%;
+  top: -35%;
+  width: 800px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  border-width: thick;
+  opacity: 0.7;
+}
+
+#moving-instructions{
+  font-family: 'VT323', monospace;
+  color: white;
+  font-size: 3em;
+  text-align: center;
 }

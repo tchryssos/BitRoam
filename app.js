@@ -17,6 +17,7 @@ $(document).ready(()=>{
   let background1Position=0
   let background2Position=0
   let cloudsPosition=0
+  let instOpacity=0.7
 
   function clouds1Move(){
     setInterval(()=>{
@@ -65,6 +66,11 @@ $(document).ready(()=>{
   $("#boy-walking").append(lookRight)
 
   $('body').keydown((e)=>{
+
+    setInterval(()=>{
+      instOpacity=instOpacity-0.02
+      $("#moving-instructions-div").css('opacity',instOpacity)
+    },1000)
 
     // $("#boy-walking").empty()
     if(e.which===39){
