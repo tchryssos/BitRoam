@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script
-    src="https://code.jquery.com/jquery-3.1.1.js"
-    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-    crossorigin="anonymous"></script>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.js"></script>
 
     <script src="app.js"></script>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" />
 
     <meta charset="utf-8">
     <title>BitRoam</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <audio id="song-player" autoplay="true" loop="true">
       <source id="song" src="./audio/STROLL SONG (NO MEL).mp3" type="audio/mpeg">
     </audio>
 
-    <div id="inst-container">
-      <div id="moving-instructions-div">
-        <p id="moving-instructions">Use the left and right arrow keys to move.</p>
+    <div id="inst-container" class="container">
+        <div class='center-div' id="moving-instructions-div">
+            <p class='game-text' id="moving-instructions">Use the left and right arrow keys to move.</p>
+        </div>
+    </div>
+
+    <div id="item-text-container" class="container">
+      <div class='center-div' id="item-text-div">
+        <p class='game-text' id='item-text'></p>
       </div>
     </div>
 
     <div id="animation">
-      <div id="boy-walking">
-      </div>
+        <div id="boy-walking">
+        </div>
 
-      <div id="sky-div">
-      </div>
+        <div id="sky-div">
+        </div>
 
-      <div id="clouds-2-div">
-      </div>
+        <div id="clouds-2-div">
+        </div>
 
-      <div id="clouds-1-div">
-      </div>
+        <div id="clouds-1-div">
+        </div>
 
-      <div id="hills-1-div">
-      </div>
+        <div id="hills-1-div">
+        </div>
 
-      <div id="hills-2-div">
-      </div>
+        <div id="hills-2-div">
+        </div>
     </div>
 
     <div id="audio-icon-div">
-      <img id="audio-icon" src="./art/audio.png"/>
+        <img id="audio-icon" src="./art/audio.png" />
     </div>
 
-  </body>
+</body>
+
 </html>

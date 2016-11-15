@@ -1,125 +1,128 @@
 @import url('https://fonts.googleapis.com/css?family=VT323');
-
-
 body, html {
-  min-height: 100%;
-  min-width: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #animation {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 #boy-walking img {
-  height: 30%;
-  position: absolute;
-  bottom: -15px;
-  left: 40%;
-  z-index: 100;
+    height: 30%;
+    position: absolute;
+    bottom: -15px;
+    left: 40%;
+    z-index: 100;
 }
 
 #hills-1-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./art/hills 1 large.png");
-  background-repeat: repeat-x;
-  background-size: 100% 100%;
-  height: 100%;
-  z-index: 90;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./art/hills 1 large.png");
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    height: 100%;
+    z-index: 90;
 }
 
 #hills-2-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./art/hills 2 large.png");
-  background-repeat: repeat-x;
-  background-size: 100% 100%;
-  height: 100%;
-  z-index: 80;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./art/hills 2 large.png");
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    height: 100%;
+    z-index: 80;
 }
 
 #sky-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./art/sky large.png");
-  background-size: 100% 100%;
-  height: 100%;
-  z-index: 70;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./art/sky large.png");
+    background-size: 100% 100%;
+    height: 100%;
+    z-index: 70;
 }
 
 #clouds-1-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./art/clouds 1.png");
-  background-size: 100% 100%;
-  height: 100%;
-  z-index: 75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./art/clouds 1.png");
+    background-size: 100% 100%;
+    height: 100%;
+    z-index: 75;
 }
 
 #clouds-2-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./art/clouds 2.png");
-  background-size: 100% 100%;
-  height: 100%;
-  z-index: 75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("./art/clouds 2.png");
+    background-size: 100% 100%;
+    height: 100%;
+    z-index: 75;
 }
 
 #audio-icon-div {
-  z-index:110;
-  position: absolute;
-  left: 20px;
-  right: 0;
-  bottom: 0;
+    z-index: 110;
+    position: absolute;
+    left: 20px;
+    right: 0;
+    bottom: 0;
 }
 
 #audio-icon {
-  height: 50px;
-  opacity: 0.5;
+    height: 50px;
+    opacity: 0.5;
 }
 
-#inst-container {
-  position: absolute;
-  left: 50%;
-  top: 35%;
+.container {
+    position: absolute;
+    left: 50%;
+    top: 35%;
 }
 
-#moving-instructions-div{
-  z-index:120;
-  position: relative;
-  left: -50%;
-  top: -35%;
-  width: 800px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 5px;
-  border-width: thick;
-  opacity: 0.7;
+.center-div {
+    z-index: 120;
+    position: relative;
+    left: -50%;
+    top: -35%;
+    width: 800px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    border-width: thick;
+    opacity: 0.7;
 }
 
-#moving-instructions{
-  font-family: 'VT323', monospace;
-  color: white;
-  font-size: 3em;
-  text-align: center;
+.game-text {
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    padding: 5px;
+}
+
+#item-text-div{
+  opacity: 0;
 }
