@@ -76,9 +76,9 @@ $(document).ready(() => {
           window.setTimeout(()=>{
             itemOpacity=0
             $("#item-text-div").css('opacity', itemOpacity)
-          },3500)
+          },5000)
         }
-      },180000)
+      },26000)
     }
 
     findItems()
