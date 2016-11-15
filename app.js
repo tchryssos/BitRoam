@@ -1,5 +1,7 @@
 $(document).ready(() => {
 
+    $("#item-text-div").hide()
+
     let stepRight = "<img src='./art/stepping right.png' id='step-right'/>"
 
     let lookRight = "<img src='./art/looking right.png' id='look-right'/>"
@@ -71,24 +73,20 @@ $(document).ready(() => {
           $("#item-text").empty()
           let foundItem=_.sample(items)
           $("#item-text").append(Object.values(foundItem)[0])
-          itemOpacity=0.7
-          $("#item-text-div").css('opacity', itemOpacity)
-          window.setTimeout(()=>{
-            itemOpacity=0
-            $("#item-text-div").css('opacity', itemOpacity)
-          },5000)
+          $("#item-text-div").fadeIn(1000,()=>{
+            window.setTimeout(()=>{
+              $("#item-text-div").fadeOut(2000)
+            },4000)
+          })
         }
-      },26000)
+      },35000)
     }
 
     findItems()
 
     $('body').keydown((e) => {
 
-        setInterval(() => {
-            instOpacity = instOpacity - 0.02
-            $("#moving-instructions-div").css('opacity', instOpacity)
-        }, 1000)
+        $("#moving-instructions-div").fadeOut(4500)
 
         // $("#boy-walking").empty()
         if (e.which === 39) {
