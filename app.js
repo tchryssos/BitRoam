@@ -24,6 +24,7 @@ $(document).ready(() => {
     let walking=false
     let lat=null
     let lon=null
+    let weather="Clear"
 
     let items=[{cigarette:`You found a cigarette on the ground. Smoking is bad for you. Put that down.`},{penny:`You found a penny on the ground. Face down. Unlucky.`}, {quarter:`You found a quarter on the ground. You only need to find 3 more to get a soda.`}, {cactus: `You found a piece of a cactus on the ground. If you think about it, that's kind of like finding a cactus arm. Weird.`}, {comic:`You found a comic book on the ground. It doesn't look like it's in mint condition.`}, {bottle:`You found a glass bottle on the ground. Looks like there's still some liquid inside. You probably shouldn't drink it.`}, {chess:`You found a chess piece on the ground. It's a pawn.`}, {cd: `You found a CD on the ground. 'Shoegaze Sampler'? No thanks.`}, {baseball:`You found a baseball on the ground. Did someone hit this all the way out here?`}, {foreignCurrency:`You found some foreign currency on the ground. Maybe you're rich in Moldova now.`}, {screw: `You found a screw on the ground. It doesn't seem to fit anything nearby.`}, {manual:`You found an instruction manual on the ground. Now you can take proper care of your VCR.`}, {tradingCard: `You found a trading card on the ground. The monster on the front doesn't look very strong.`}, {basket: `You found a picnic basket on the ground. Ew! A moldy sandwich is inside!`}, {magnifyingGlass: `You found a magnifying glass on the ground. Maybe there's a clue nearby?`}, {candle: `You found a candle on the ground. It's been a while since you participated in a seance.`}, {rock: `You found a rock on the ground... although there are rocks everywhere. Did you really 'find' this?`}, {Headphones: `You found a pair of headphones on the ground. If only you had brought your CD player.`}, {mouthpiece: `You found a  mouthpiece on the ground. Does mom still have your trumpet in the attic?`}]
     let itemsBool=true
@@ -163,19 +164,19 @@ $(document).ready(() => {
         }
     })
 
-    function getLocation() {
+    function getWeather() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(fetchWeather)
+      navigator.geolocation.getCurrentPosition(fetchWeatherData)
     }
   }
 
-  function fetchWeather(position){
+  function fetchWeatherData(position){
     lat=position.coords.latitude
     lon=position.coords.longitude
-    console.log(`${lat}, ${lon}`)
+    console.log(lat, lon)
   }
 
-  getLocation()
+  getWeather()
 
-  
+
 })
