@@ -13,7 +13,11 @@ app.get('/', function(req, res){
   res.render('index')
 })
 
-app.listen(process.env.PORT || 5000, function(err){
+app.get('/weather', function(req, res){
+  
+})
+
+app.listen(process.env.PORT || 3000, function(err){
   if (err) console.log("could not start server")
   if (!err)console.log("Server is running on port 3000")
 })
