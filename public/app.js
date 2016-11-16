@@ -2,13 +2,13 @@ $(document).ready(() => {
 
     $("#item-text-div").hide()
 
-    let stepRight = "<img src='./art/stepping right.png' id='step-right'/>"
+    let stepRight = "<img src='/static/art/stepping right.png' id='step-right'/>"
 
-    let lookRight = "<img src='./art/looking right.png' id='look-right'/>"
+    let lookRight = "<img src='/static/art/looking right.png' id='look-right'/>"
 
-    let stepLeft = "<img src='./art/stepping left.png' id='step-left'/>"
+    let stepLeft = "<img src='/static/art/stepping left.png' id='step-left'/>"
 
-    let lookLeft = "<img src='./art/looking left.png' id='look-left'/>"
+    let lookLeft = "<img src='/static/art/looking left.png' id='look-left'/>"
 
     let keyPressed = null
 
@@ -153,13 +153,13 @@ $(document).ready(() => {
         if (songPaused === false) {
             $('#song-player')[0].pause()
             $('#audio-icon-div').empty()
-            $('#audio-icon-div').append("<img id='audio-icon' src='./art/no audio.png'/>")
+            $('#audio-icon-div').append("<img id='audio-icon' src='/static/art/no audio.png'/>")
             $('#song-player')[0].currentTime = 0
             songPaused = true
         } else {
             $('#song-player')[0].play()
             $('#audio-icon-div').empty()
-            $('#audio-icon-div').append("<img id='audio-icon' src='./art/audio.png'/>")
+            $('#audio-icon-div').append("<img id='audio-icon' src='/static/art/audio.png'/>")
             songPaused = false
         }
     })
@@ -177,6 +177,4 @@ $(document).ready(() => {
   }
 
   getWeather()
-
-
 })
