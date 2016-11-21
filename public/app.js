@@ -173,8 +173,18 @@ $(document).ready(() => {
   function fetchWeatherData(position){
     lat=position.coords.latitude
     lon=position.coords.longitude
-    console.log(lat, lon)
+    $.ajax({
+      url: '/weather',
+      method: "POST",
+      data: `{latitude: ${lat}, longitude: ${lon}}`,
+      success: (weatherData, status)=>{
+        debugger
+      },
+      error: ()=>{
+        console.log("not today")
+      }
+    })
   }
 
-  // getWeather()
+  getWeather()
 })
