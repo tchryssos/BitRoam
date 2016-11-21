@@ -26,9 +26,9 @@ app.post('/weather', function(req, res){
 
   req.on('end',()=>{
     var latNum=body.split(/[:,{}\s]/)[3]
-    var logNum=body.split(/[:,{}\s]/)[7]
+    var lonNum=body.split(/[:,{}\s]/)[7]
 
-    request(, (error, response, body)=>{
+    request(`http://api.openweathermap.org/data/2.5/weather?lat=${latNum}&lon=${lonNum}&appid=00c1683712154bb4db5a3177a06041b5`, (error, response, body)=>{
       if (!error && response.statusCode==200){
         console.log(body)
       }
