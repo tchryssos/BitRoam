@@ -166,7 +166,9 @@ $(document).ready(() => {
 
     function getWeather() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(fetchWeatherData)
+      navigator.geolocation.getCurrentPosition(fetchWeatherData, ()=>{
+        console.log("Geolocation failed.")
+      })
     }
   }
 
@@ -178,10 +180,11 @@ $(document).ready(() => {
       method: "POST",
       data: `{latitude: ${lat}, longitude: ${lon}}`,
       success: (weatherData, status)=>{
-        debugger
+        weather=weatherData
+        console.log(weather)
       },
       error: ()=>{
-        console.log("not today")
+        console.log("Error fetching weather!")
       }
     })
   }
