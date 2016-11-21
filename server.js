@@ -4,7 +4,7 @@ var bodyParser = require('body-parser')
 var app = express()
 var request=require('request')
 var jsonParse=bodyParser.json()
-var weatherKey="00c1683712154bb4db5a3177a06041b5"
+require('dotenv').config()
 
 app.use(morgan('dev'))
 app.use('/static', express.static('public'))
@@ -31,7 +31,7 @@ app.post('/weather', function(req, res){
 
     console.log("Making request to Weather API")
 
-    request(`http://api.openweathermap.org/data/2.5/weather?lat=${latNum}&lon=${lonNum}&appid=${weatherKey}`, (error, response, body)=>{
+    request(`http://api.openweathermap.org/data/2.5/weather?lat=${latNum}&lon=${lonNum}&appid=${process.env.WEATHER_KEY}`, (error, response, body)=>{
       if (!error && response.statusCode==200){
         var parseBody=JSON.parse(body)
         var currentWeather=parseBody["weather"][0]["main"]
