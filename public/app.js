@@ -51,7 +51,7 @@ $(document).ready(() => {
           rainPosition = rainPosition + 25
           $("#weather-1-div").css('background-position-y', rainPosition)
           $("#weather-1-div").css('background-position-x', rainPosition)
-      }, 100)
+      }, 250)
     }
 
     weatherFall1()
@@ -61,7 +61,7 @@ $(document).ready(() => {
           rainPosition = rainPosition + 25
           $("#weather-2-div").css('background-position-y', rainPosition)
           $("#weather-2-div").css('background-position-x', rainPosition)
-      }, 150)
+      }, 350)
     }
 
     weatherFall2()
@@ -71,7 +71,7 @@ $(document).ready(() => {
           rainPosition = rainPosition + 25
           $("#weather-3-div").css('background-position-y', rainPosition)
           $("#weather-3-div").css('background-position-x', rainPosition)
-      }, 75)
+      }, 200)
     }
 
     weatherFall3()
