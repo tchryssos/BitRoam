@@ -16,8 +16,9 @@ $(document).ready(() => {
 
     let songPaused = false
 
-    let background1Position = 0
-    let background2Position = 0
+    let hill1Position = 0
+    let hill2Position = 0
+    let rainPosition=0
     let cloudsPosition = 0
     let instOpacity = 0.7
     let itemOpacity=0.7
@@ -45,28 +46,58 @@ $(document).ready(() => {
     }
     clouds2Move()
 
-    function hills1Right() {
-        background1Position = background1Position - 10;
+    function weatherFall1(){
+      setInterval(() => {
+          rainPosition = rainPosition + 25
+          $("#weather-1-div").css('background-position-y', rainPosition)
+          $("#weather-1-div").css('background-position-x', rainPosition)
+      }, 100)
+    }
 
-        $("#hills-1-div").css('background-position-x', background1Position)
+    weatherFall1()
+
+    function weatherFall2(){
+      setInterval(() => {
+          rainPosition = rainPosition + 25
+          $("#weather-2-div").css('background-position-y', rainPosition)
+          $("#weather-2-div").css('background-position-x', rainPosition)
+      }, 150)
+    }
+
+    weatherFall2()
+
+    function weatherFall3(){
+      setInterval(() => {
+          rainPosition = rainPosition + 25
+          $("#weather-3-div").css('background-position-y', rainPosition)
+          $("#weather-3-div").css('background-position-x', rainPosition)
+      }, 75)
+    }
+
+    weatherFall3()
+
+    function hills1Right() {
+        hill1Position = hill1Position - 10;
+
+        $("#hills-1-div").css('background-position-x', hill1Position)
     }
 
     function hills1Left() {
-        background1Position = background1Position + 10;
+        hill1Position = hill1Position + 10;
 
-        $("#hills-1-div").css('background-position-x', background1Position)
+        $("#hills-1-div").css('background-position-x', hill1Position)
     }
 
     function hills2Left() {
-        background2Position = background2Position + 4
+        hill2Position = hill2Position + 4
 
-        $("#hills-2-div").css('background-position-x', background2Position)
+        $("#hills-2-div").css('background-position-x', hill2Position)
     }
 
     function hills2Right() {
-        background2Position = background2Position - 4
+        hill2Position = hill2Position - 4
 
-        $("#hills-2-div").css('background-position-x', background2Position)
+        $("#hills-2-div").css('background-position-x', hill2Position)
     }
 
     $("#boy-walking").append(lookRight)
