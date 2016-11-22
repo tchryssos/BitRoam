@@ -136,7 +136,7 @@ body, html {
 }
 
 #audio-icon-div {
-    z-index: 110;
+    z-index: 10000000;
     position: absolute;
     left: 20px;
     right: 0;

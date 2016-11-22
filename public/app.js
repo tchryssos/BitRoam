@@ -54,7 +54,7 @@ $(document).ready(() => {
       }, 250)
     }
 
-    weatherFall1()
+    // weatherFall1()
 
     function weatherFall2(){
       setInterval(() => {
@@ -64,7 +64,7 @@ $(document).ready(() => {
       }, 350)
     }
 
-    weatherFall2()
+    // weatherFall2()
 
     function weatherFall3(){
       setInterval(() => {
@@ -74,7 +74,7 @@ $(document).ready(() => {
       }, 200)
     }
 
-    weatherFall3()
+    // weatherFall3()
 
     function hills1Right() {
         hill1Position = hill1Position - 10;
@@ -181,7 +181,7 @@ $(document).ready(() => {
     })
 
     $('#audio-icon-div').click(() => {
-        if (songPaused === false) {
+        if (songPaused == false) {
             $('#song-player')[0].pause()
             $('#audio-icon-div').empty()
             $('#audio-icon-div').append("<img id='audio-icon' src='/static/art/no audio.png'/>")
