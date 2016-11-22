@@ -2,10 +2,13 @@
 body, html {
     min-height: 100%;
     min-width: 100%;
-    margin: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
     padding: 0px;
     overflow-x: hidden;
     overflow-y: hidden;
+    -moz-overflow: hidden;
 }
 
 #animation {
@@ -30,7 +33,7 @@ body, html {
     bottom: 0;
     background-image: url("./art/hills 1 large.png");
     background-repeat: repeat-x;
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100%;
     z-index: 90;
     -webkit-transform: translate3d(0,0,0);
@@ -44,7 +47,7 @@ body, html {
     bottom: 0;
     background-image: url("./art/hills 2 large.png");
     background-repeat: repeat-x;
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100%;
     z-index: 80;
     -webkit-transform: translate3d(0,0,0);
@@ -57,7 +60,7 @@ body, html {
     right: 0;
     bottom: 0;
     background-image: url("./art/grey-sky.png");
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100%;
     z-index: 70;
     -webkit-transform: translate3d(0,0,0);
@@ -70,7 +73,7 @@ body, html {
     right: 0;
     bottom: 0;
     background-image: url("./art/cloud-layer-1.png");
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100%;
     z-index: 75;
     -webkit-transform: translate3d(0,0,0);
@@ -83,54 +86,22 @@ body, html {
     right: 0;
     bottom: 0;
     background-image: url("./art/cloud-layer-2.png");
-    background-size: 100% 100%;
+    background-size: cover;
     height: 100%;
     z-index: 75;
     -webkit-transform: translate3d(0,0,0);
 }
 
-/*#weather-parent-div {
-  opacity: 0.9;
-}*/
-
-#weather-1-div {
+#weather-div {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./art/rain-1.png");
-    background-size: 450px 325px;
+    background-image: url("./art/rain0.png");
+    background-size: 600px 500px;
     height: 100%;
     z-index: 200;
-    -webkit-transform: translate3d(0,0,0);
-    opacity: 0.4;
-}
-
-#weather-2-div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("./art/rain-2.png");
-    background-size: 450px 325px;
-    height: 100%;
-    z-index: 150;
-    -webkit-transform: translate3d(0,0,0);
-    opacity: 0.4;
-}
-
-#weather-3-div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("./art/rain-3.png");
-    background-size: 450px 325px;
-    height: 100%;
-    z-index: 130;
     -webkit-transform: translate3d(0,0,0);
     opacity: 0.4;
 }
@@ -165,6 +136,7 @@ body, html {
     border-radius: 5px;
     border-width: thick;
     opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .game-text {

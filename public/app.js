@@ -16,9 +16,9 @@ $(document).ready(() => {
 
     let songPaused = false
 
+    let rainFrame=0
     let hill1Position = 0
     let hill2Position = 0
-    let rainPosition=0
     let cloudsPosition = 0
     let instOpacity = 0.7
     let itemOpacity=0.7
@@ -48,33 +48,17 @@ $(document).ready(() => {
 
     function weatherFall1(){
       setInterval(() => {
-          rainPosition = rainPosition + 25
-          $("#weather-1-div").css('background-position-y', rainPosition)
-          $("#weather-1-div").css('background-position-x', rainPosition)
-      }, 250)
+        if (rainFrame<2){
+          rainFrame=rainFrame+1
+          $("#weather-div").css('background-image', `url('/static/art/rain${rainFrame}.png')`)
+        } else {
+          rainFrame=0
+          $("#weather-div").css('background-image', `url('/static/art/rain${rainFrame}.png')`)
+        }
+      }, 175)
     }
 
-    // weatherFall1()
-
-    function weatherFall2(){
-      setInterval(() => {
-          rainPosition = rainPosition + 25
-          $("#weather-2-div").css('background-position-y', rainPosition)
-          $("#weather-2-div").css('background-position-x', rainPosition)
-      }, 350)
-    }
-
-    // weatherFall2()
-
-    function weatherFall3(){
-      setInterval(() => {
-          rainPosition = rainPosition + 25
-          $("#weather-3-div").css('background-position-y', rainPosition)
-          $("#weather-3-div").css('background-position-x', rainPosition)
-      }, 200)
-    }
-
-    // weatherFall3()
+    weatherFall1()
 
     function hills1Right() {
         hill1Position = hill1Position - 10;
