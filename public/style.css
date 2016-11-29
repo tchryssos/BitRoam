@@ -162,11 +162,11 @@ body, html {
 #loading-text-div{
   z-index: 250;
   border: none;
-  top: -45%;
 }
 
 #loading-text {
-  top: 30%;
+  font-size: 5em;
+  margin: 0;
 }
 
 #loading-bar{
