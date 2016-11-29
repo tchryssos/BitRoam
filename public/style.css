@@ -161,4 +161,15 @@ body, html {
 
 #loading-text-div{
   z-index: 250;
+  border: none;
+  top: -45%;
+}
+
+#loading-text {
+  top: 30%;
+}
+
+#loading-bar{
+  width:100%;
+  margin: auto;
 }

@@ -28,6 +28,17 @@ $(document).ready(() => {
     let lon=null
     let weather="Clear"
     let weatherLoad=false
+    let loadingFrame=0
+
+    let loadingAnimation=setInterval(() => {
+      if (loadingFrame<7){
+        loadingFrame=loadingFrame+1
+        $("#loading-bar")[0].src=`/static/art/loading${loadingFrame}.png`
+      } else {
+        loadingFrame=0
+        $("#loading-bar")[0].src=`/static/art/loading${loadingFrame}.png`
+      }
+    }, 200)
 
     let items=[{cigarette:`You found a cigarette on the ground. Smoking is bad for you. Put that down.`},{penny:`You found a penny on the ground. Face down. Unlucky.`}, {quarter:`You found a quarter on the ground. You only need to find 3 more to get a soda.`}, {cactus: `You found a piece of a cactus on the ground. If you think about it, that's kind of like finding a cactus arm. Weird.`}, {comic:`You found a comic book on the ground. It doesn't look like it's in mint condition.`}, {bottle:`You found a glass bottle on the ground. Looks like there's still some liquid inside. You probably shouldn't drink it.`}, {chess:`You found a chess piece on the ground. It's a pawn.`}, {cd: `You found a CD on the ground. 'Shoegaze Sampler'? No thanks.`}, {baseball:`You found a baseball on the ground. Did someone hit this all the way out here?`}, {foreignCurrency:`You found some foreign currency on the ground. Maybe you're rich in Moldova now.`}, {screw: `You found a screw on the ground. It doesn't seem to fit anything nearby.`}, {manual:`You found an instruction manual on the ground. Now you can take proper care of your VCR.`}, {tradingCard: `You found a trading card on the ground. The monster on the front doesn't look very strong.`}, {basket: `You found a picnic basket on the ground. Ew! A moldy sandwich is inside!`}, {magnifyingGlass: `You found a magnifying glass on the ground. Maybe there's a clue nearby?`}, {candle: `You found a candle on the ground. It's been a while since you participated in a seance.`}, {rock: `You found a rock on the ground... although there are rocks everywhere. Did you really 'find' this?`}, {Headphones: `You found a pair of headphones on the ground. If only you had brought your CD player.`}, {mouthpiece: `You found a  mouthpiece on the ground. Does mom still have your trumpet in the attic?`}, {cork: `You found a cork on the ground. Don't scientists say you should drink some wine every day?`}, {mouse: `You found a computer mouse on the ground. This will be great for your MOBAs.`}, {key: `You found a key on the ground. Oh wait, it's yours. Good thing you found it.`}, {marble: `You found a marble on the ground. Do people still play with these?`}, {bookmark: `You found a bookmark on the ground. Maybe now you'll do more reading.`}, {crayon: `You found a crayon on the ground. It's a nice teal color.`}, {actionFigure: `You found an action figure on the ground. Commander Riker! Cool!`}, {watch: `You found a watch on the ground. It has the wrong time.`}, {fortune: `You found a fortune cookie fortune on the ground. 'Cheer Up!' Is that a fortune?`}]
     let itemsBool=true
@@ -47,6 +58,7 @@ $(document).ready(() => {
     findItems()
     $("#loading-screen").fadeOut(3000)
     $("#loading-text-div").css('display', 'none')
+    clearInterval(loadingAnimation)
   }
 
   function fetchWeatherData(position){
