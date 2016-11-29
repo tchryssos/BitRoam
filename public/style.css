@@ -59,7 +59,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./art/grey-sky.png");
+    /*background-image: url("./art/grey-sky.png");*/
     background-size: cover;
     height: 100%;
     z-index: 70;
@@ -72,7 +72,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./art/cloud-layer-1.png");
+    /*background-image: url("./art/cloud-layer-1.png");*/
     background-size: cover;
     height: 100%;
     z-index: 75;
@@ -85,7 +85,7 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./art/cloud-layer-2.png");
+    /*background-image: url("./art/cloud-layer-2.png");*/
     background-size: cover;
     height: 100%;
     z-index: 75;
@@ -98,8 +98,8 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("./art/rain0.png");
-    background-size: 600px 500px;
+    /*background-image: url("./art/rain0.png");*/
+    background-size: 700px 600px;
     height: 100%;
     z-index: 200;
     -webkit-transform: translate3d(0,0,0);
