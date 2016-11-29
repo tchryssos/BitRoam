@@ -15,9 +15,19 @@
 
 <body>
 
+  <div id='loading-screen'>
+  </div>
+
     <audio id="song-player" autoplay="true" loop="true">
       <source id="song" src="../static/audio/STROLL SONG (NO MEL).mp3" type="audio/mpeg">
     </audio>
+
+    <div id='loading-container' class='container'>
+      <div class='center-div' id='loading-text-div'>
+        <p class='game-text' id='loading-text'>   Loading Weather</p>
+        <img id='loading-bar' src='/static/art/loading0.png'/>
+      </div>
+    </div>
 
     <div id="inst-container" class="container">
         <div class='center-div' id="moving-instructions-div">
@@ -26,7 +36,7 @@
     </div>
 
     <div id="item-text-container" class="container">
-      <div class='center-div' id="item-text-div">
+      <div class='center-div' id="centering-div">
         <p class='game-text' id='item-text'></p>
       </div>
     </div>
