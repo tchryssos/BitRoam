@@ -70,6 +70,7 @@ $(document).ready(() => {
       data: `{latitude: ${lat}, longitude: ${lon}}`,
       success: (weatherData, status)=>{
         weather=weatherData
+        console.log(weather)
         weatherLoadComplete()
       },
       error: ()=>{
@@ -110,9 +111,9 @@ $(document).ready(() => {
         weatherFall("rain")
         break
       default:
-        $("#clouds-1-div").css('background-image', '/static/art/clouds 1.png')
-        $("#clouds-2-div").css('background-image', '/static/art/clouds 2.png')
-        $("#sky-div").css('background-image', '/static/art/sky large.png')
+        $("#clouds-1-div").css('background-image', 'url("/static/art/clouds 1.png")')
+        $("#clouds-2-div").css('background-image', 'url("/static/art/clouds 2.png")')
+        $("#sky-div").css('background-image', 'url("/static/art/sky large.png")')
         break
     }
   }
