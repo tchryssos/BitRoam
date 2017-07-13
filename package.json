@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "web app that allows users to walk through a virtual desert",
   "main": "server.js",
+  "engines:": {
+    "node": "6.11.1"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
